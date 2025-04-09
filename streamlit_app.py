@@ -24,13 +24,17 @@ stocks = [stock_1, stock_2]
 
 fee = float(st.slider("How much is your brokerage fee (%)?: ", 0.0, 1.0, 0.1)) / 100
 t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the more negative the more unusual):", -4.0, -0.5, -2.5)
+
+today = datetime.today()  # capture today's date once
+
 year_range = st.slider(
     "During what timeframe do you want to trade?",
     min_value=datetime(2020, 1, 1),
-    max_value=datetime.today(),
-    value=(datetime(2020, 1, 1), datetime.today()),
+    max_value=today,
+    value=(datetime(2020, 1, 1), today),
     format="DD/MM/YY"
 )
+
 
 (start, end) = year_range
 
