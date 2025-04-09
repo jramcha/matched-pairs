@@ -138,7 +138,7 @@ if run_sim:
             gross_returns = np.append(gross_returns, gross_return)
             cumulative_display = str(round(np.prod(1+net_returns)*100-100,2)) if len(net_returns)>0 else "0.00"
             print_trade_day(str(current_date),
-                            "No trading signal (t_opt too high)",
+                            "No trading, no significant signal.",
                             cumulative_display,
                             "0.00", "0.00")
         else:
