@@ -19,14 +19,14 @@ st.markdown("# :chart_with_upwards_trend: Matched Pairs Backtesting Simulator")
 st.write("Browse stock data from [Yahoo Finance](https://au.finance.yahoo.com/). Run a simulation on two stocks you believe to be related (e.g., Coca-Cola & Pepsi), and see how pairs trading would have worked in your selected timeframe!")
 
 # User inputs
-stock_1 = st.text_input("First stock ticker:", "PEP")
-stock_2 = st.text_input("Second stock ticker:", "KO")
+stock_1 = st.text_input("First stock ticker (e.g. AAL for American Airlines):", "AAL")
+stock_2 = st.text_input("Second stock ticker (e.g. UAL for United Airlines):", "UAL")
 window = st.text_input("Trading window (How many days worth of trade history do you want to base your trade on?)", "255")
 stocks = [stock_1, stock_2]
 
 fee = float(st.slider("How much is your brokerage fee (%)?: ", 0.0, 1.0, 0.1)) / 100
 # Try adjusting the default threshold (e.g. -1.5 instead of -2.5) if you don't see any trades.
-t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the more negative the more unusual):", -4.0, -0.5, -2.5)
+t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the more negative the more unusual):", -4.0, -0.5, -2.0)
 
 # Capture today's date once so that it doesn't update continuously.
 today = datetime.today()
