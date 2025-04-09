@@ -25,7 +25,7 @@ stocks = [stock_1, stock_2]
 fee = float(st.slider("How much is your brokerage fee (%)?: ", 0.0, 1.0, 0.1)) / 100
 t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the more negative the more unusual):", -4.0, -0.5, -2.5)
 year_range = st.slider("During what timeframe do you want to trade?",
-                       value=(datetime(2015, 1, 1), datetime(2025, 1, 1)),
+                       value=(datetime(2020, 1, 1), datetime(2025, 1, 1)),
                        format="DD/MM/YY")
 (start, end) = year_range
 
