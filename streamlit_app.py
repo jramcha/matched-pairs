@@ -29,11 +29,10 @@ today = datetime.today()  # capture today's date once
 
 year_range = st.slider(
     "During what timeframe do you want to trade?",
-    min_value=datetime(2020, 1, 1),
-    max_value=today,
-    value=(datetime(2020, 1, 1), today),
+    value=(datetime(2015, 1, 1), today),
     format="DD/MM/YY"
 )
+
 
 
 (start, end) = year_range
