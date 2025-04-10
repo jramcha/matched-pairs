@@ -31,7 +31,7 @@ t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the mo
 # Capture today's date once so that it doesn't update continuously.
 today = datetime.today()
 year_range = st.slider("During what timeframe do you want to trade?",
-                       value=(datetime(2020, 1, 1), today),
+                       value=(datetime(2020, 1, 1), datetime(2025, 9, 4)),
                        format="DD/MM/YY")
 (start, end) = year_range
 
@@ -106,6 +106,7 @@ stock_fig, stock_ax = plt.subplots()
 returns_fig, returns_ax = plt.subplots()
 
 if run_sim:
+    time.sleep(2)
     st.session_state["trade_content"] = ""
     # Reset arrays for plotting.
     gross_returns = np.array([])
