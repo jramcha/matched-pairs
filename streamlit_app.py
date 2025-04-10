@@ -16,8 +16,8 @@ st.markdown(
     /* Default desktop styling */
     #trade-window {
         position: fixed;
-        top: 30px;
-        bottom: 320px;  /* Increased bottom offset so that the window ends higher */
+        top: 0px;
+        bottom: 270px;  /* Increased bottom offset so that the window ends higher */
         right: 0;
         width: 250px;
         overflow-y: auto;
