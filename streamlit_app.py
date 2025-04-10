@@ -9,6 +9,8 @@ import matplotlib.dates as mdates
 from datetime import datetime
 import time
 
+st.set_page_config(page_title='Matched Pairs Simulator', page_icon=':chart_increasing:')
+
 st.markdown(
     """
     <style>
@@ -46,7 +48,7 @@ st.markdown(
 )
 
 
-st.set_page_config(page_title='Matched Pairs Simulator', page_icon=':chart_increasing:')
+
 
 # Prepare session state for trades output.
 if "trade_content" not in st.session_state:
