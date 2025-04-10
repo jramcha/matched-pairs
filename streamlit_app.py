@@ -10,15 +10,14 @@ from datetime import datetime
 import time
 
 st.set_page_config(page_title='Matched Pairs Simulator', page_icon=':chart_increasing:')
-
 st.markdown(
     """
     <style>
     /* Default desktop styling */
     #trade-window {
         position: fixed;
-        top: 30px;  /* Reduced top spacing */
-        bottom: 10px;
+        top: 30px;
+        bottom: 320px;  /* Increased bottom offset so that the window ends higher */
         right: 0;
         width: 250px;
         overflow-y: auto;
@@ -27,7 +26,6 @@ st.markdown(
         border-left: 1px solid #515267;
         padding: 10px;
         font-family: sans-serif;
-        margin-bottom: 10px;
     }
     
     /* Mobile styling: For screens less than 768px wide */
@@ -42,7 +40,8 @@ st.markdown(
         }
     }
     </style>
-    """, unsafe_allow_html=True
+    """, 
+    unsafe_allow_html=True
 )
 
 
