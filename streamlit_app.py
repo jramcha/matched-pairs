@@ -31,8 +31,6 @@ t_threshold = st.slider("Choose a Dickey-Fuller test statistic threshold (the mo
 # Capture today's date once so that it doesn't update continuously.
 today = datetime.today()
 year_range = st.slider("During what timeframe do you want to trade?",
-                       min_value=datetime(2020, 1, 1),
-                       max_value=today,
                        value=(datetime(2020, 1, 1), today),
                        format="DD/MM/YY")
 (start, end) = year_range
