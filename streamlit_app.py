@@ -21,7 +21,7 @@ st.write("Browse stock data from [Yahoo Finance](https://au.finance.yahoo.com/).
 # User inputs
 stock_1 = st.text_input("First stock ticker (e.g. AAL for American Airlines):", "AAL")
 stock_2 = st.text_input("Second stock ticker (e.g. UAL for United Airlines):", "UAL")
-window = st.text_input("Trading window (How many days worth of trade history do you want to base your trade on?)", "255")
+window = st.text_input("Trading window (How many days worth of trade history do you want to base your trade on? (250 is default - 1 year worth of trading days.))", "250")
 stocks = [stock_1, stock_2]
 
 fee = float(st.slider("How much is your brokerage fee (%)?: ", 0.0, 1.0, 0.1)) / 100
