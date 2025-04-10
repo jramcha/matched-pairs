@@ -33,7 +33,7 @@ st.markdown(
         #trade-window {
             position: relative !important;
             width: 95% !important;
-            max-height: 200px !important;
+            max-height: 300px !important;
             border-left: none !important;
             border-top: 1px solid #515267 !important;
             margin: 10px auto 10px auto !important;
