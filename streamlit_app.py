@@ -9,6 +9,43 @@ import matplotlib.dates as mdates
 from datetime import datetime
 import time
 
+st.markdown(
+    """
+    <style>
+    /* Styles for desktop (default) */
+    #trade-window {
+        position: fixed;
+        top: 60px;
+        bottom: 10px;
+        right: 0;
+        width: 300px;
+        overflow-y: auto;
+        background-color: #262730;
+        color: #f9f9f9;
+        border-left: 1px solid #515267;
+        padding: 10px;
+        font-family: sans-serif;
+    }
+    /* Styles for mobile devices */
+    @media only screen and (max-width: 768px) {
+        /* Remove fixed positioning on mobile and let the trade window span full width */
+        #trade-window {
+            position: relative !important;
+            width: 100% !important;
+            border-left: none !important;
+            border-top: 1px solid #515267 !important;
+            margin-bottom: 20px;
+        }
+        /* Adjust any margins or paddings for your plot containers if necessary */
+        .css-1adrfps {
+            margin-top: 20px;
+        }
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
+
 st.set_page_config(page_title='Matched Pairs Simulator', page_icon=':chart_increasing:')
 
 # Prepare session state for trades output.
