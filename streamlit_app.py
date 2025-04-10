@@ -14,36 +14,36 @@ st.set_page_config(page_title='Matched Pairs Simulator', page_icon=':chart_incre
 st.markdown(
     """
     <style>
-    /* Default: Desktop styling */
+    /* Default desktop styling */
     #trade-window {
         position: fixed;
         top: 60px;
         bottom: 10px;
         right: 0;
-        width: 300px;
+        width: 250px;  /* Reduced width compared to 300px */
         overflow-y: auto;
         background-color: #262730;
         color: #f9f9f9;
         border-left: 1px solid #515267;
         padding: 10px;
         font-family: sans-serif;
+        margin-bottom: 10px; /* Extra space below the window */
     }
     
-    /* Mobile styling */
+    /* Mobile styling: For screens less than 768px wide */
     @media only screen and (max-width: 768px) {
         #trade-window {
             position: relative !important;
-            width: 100% !important;
-            max-height: 300px;    /* Limit the visible area */
-            overflow-y: auto !important;  /* Make it scrollable */
+            width: 95% !important;
+            max-height: 300px !important;  /* Ensure space for at least 2 trade blocks */
             border-left: none !important;
             border-top: 1px solid #515267 !important;
-            margin-bottom: 20px;
+            margin: 10px auto 10px auto !important;  /* Centered with vertical margins */
         }
     }
     </style>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
 
 
