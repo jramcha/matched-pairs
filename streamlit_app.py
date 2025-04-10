@@ -17,17 +17,17 @@ st.markdown(
     /* Default desktop styling */
     #trade-window {
         position: fixed;
-        top: 60px;
+        top: 30px;  /* Reduced top spacing */
         bottom: 10px;
         right: 0;
-        width: 250px;  /* Reduced width compared to 300px */
+        width: 250px;
         overflow-y: auto;
         background-color: #262730;
         color: #f9f9f9;
         border-left: 1px solid #515267;
         padding: 10px;
         font-family: sans-serif;
-        margin-bottom: 10px; /* Extra space below the window */
+        margin-bottom: 10px;
     }
     
     /* Mobile styling: For screens less than 768px wide */
@@ -35,16 +35,16 @@ st.markdown(
         #trade-window {
             position: relative !important;
             width: 95% !important;
-            max-height: 300px !important;  /* Ensure space for at least 2 trade blocks */
+            max-height: 300px !important;
             border-left: none !important;
             border-top: 1px solid #515267 !important;
-            margin: 10px auto 10px auto !important;  /* Centered with vertical margins */
+            margin: 10px auto 10px auto !important;
         }
     }
     </style>
-    """,
-    unsafe_allow_html=True
+    """, unsafe_allow_html=True
 )
+
 
 
 
