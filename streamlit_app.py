@@ -167,7 +167,7 @@ if run_sim:
             
         res1 = spop.minimize(unit_root, data[stock1][t] / data[stock2][t], method='Nelder-Mead')
         t_opt = res1.fun
-        b_opt = float(res1.x)
+        b_opt = float(res1.x.item())
         a_opt = np.average(data[stock2][t-window:t] - b_opt * data[stock1][t-window:t])
         fair_value = a_opt + b_opt * data[stock1][t]
         
